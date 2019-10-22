@@ -10,6 +10,16 @@
 		9AA21B2C235F2EDA0006B53D /* TableDirector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AA21B22235F2EDA0006B53D /* TableDirector.framework */; };
 		9AA21B31235F2EDA0006B53D /* TableDirectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA21B30235F2EDA0006B53D /* TableDirectorTests.swift */; };
 		9AA21B33235F2EDA0006B53D /* TableDirector.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AA21B25235F2EDA0006B53D /* TableDirector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9AA21B86235F302C0006B53D /* CellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA21B7D235F302C0006B53D /* CellBuilder.swift */; };
+		9AA21B89235F302C0006B53D /* TableRowBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA21B82235F302C0006B53D /* TableRowBuilder.swift */; };
+		9AA21B8A235F302C0006B53D /* TableRowSwipeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA21B83235F302C0006B53D /* TableRowSwipeBuilder.swift */; };
+		9AA21B8B235F302C0006B53D /* ConfigurableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA21B84235F302C0006B53D /* ConfigurableCell.swift */; };
+		AC03132C050847B966ADCA55 /* TableViewDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC031F6BE70CD5E65CF31EC5 /* TableViewDirector.swift */; };
+		AC03164C443B77BB42F99A8C /* CollectionCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC031769DED3EF8B54587B07 /* CollectionCellBuilder.swift */; };
+		AC03164E070BD0A16C7AFB28 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC031BAA43D14DEA03DDFC76 /* TableSection.swift */; };
+		AC0316774324A02947E9DB0C /* CommonCellMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0312C2CC3764570222BBE6 /* CommonCellMarker.swift */; };
+		AC031694AE80BE20A3001883 /* CollectgionDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC03103282B724DF556B241D /* CollectgionDirector.swift */; };
+		AC031C33B60C8EF4407CC13A /* TableRowAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC031CB089635BD4B7E1C756 /* TableRowAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,16 @@
 		9AA21B2B235F2EDA0006B53D /* TableDirectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableDirectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AA21B30235F2EDA0006B53D /* TableDirectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDirectorTests.swift; sourceTree = "<group>"; };
 		9AA21B32235F2EDA0006B53D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AA21B7D235F302C0006B53D /* CellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellBuilder.swift; sourceTree = "<group>"; };
+		9AA21B82235F302C0006B53D /* TableRowBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowBuilder.swift; sourceTree = "<group>"; };
+		9AA21B83235F302C0006B53D /* TableRowSwipeBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableRowSwipeBuilder.swift; sourceTree = "<group>"; };
+		9AA21B84235F302C0006B53D /* ConfigurableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurableCell.swift; sourceTree = "<group>"; };
+		AC03103282B724DF556B241D /* CollectgionDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectgionDirector.swift; path = TableDirector/Directors/CollectgionDirector.swift; sourceTree = SOURCE_ROOT; };
+		AC0312C2CC3764570222BBE6 /* CommonCellMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonCellMarker.swift; sourceTree = "<group>"; };
+		AC031769DED3EF8B54587B07 /* CollectionCellBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionCellBuilder.swift; sourceTree = "<group>"; };
+		AC031BAA43D14DEA03DDFC76 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableSection.swift; path = TableDirector/Directors/TableSection.swift; sourceTree = SOURCE_ROOT; };
+		AC031CB089635BD4B7E1C756 /* TableRowAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableRowAction.swift; path = TableDirector/Actions/TableRowAction.swift; sourceTree = SOURCE_ROOT; };
+		AC031F6BE70CD5E65CF31EC5 /* TableViewDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewDirector.swift; path = TableDirector/Directors/TableViewDirector.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +91,14 @@
 		9AA21B24235F2EDA0006B53D /* TableDirector */ = {
 			isa = PBXGroup;
 			children = (
+				9AA21B7B235F302C0006B53D /* Actions */,
+				9AA21B81235F302C0006B53D /* Builders */,
+				9AA21B7D235F302C0006B53D /* CellBuilder.swift */,
+				9AA21B84235F302C0006B53D /* ConfigurableCell.swift */,
+				9AA21B7E235F302C0006B53D /* Directors */,
 				9AA21B25235F2EDA0006B53D /* TableDirector.h */,
 				9AA21B26235F2EDA0006B53D /* Info.plist */,
+				AC0313350DC7DDAF99DC276A /* Other */,
 			);
 			path = TableDirector;
 			sourceTree = "<group>";
@@ -84,6 +110,44 @@
 				9AA21B32235F2EDA0006B53D /* Info.plist */,
 			);
 			path = TableDirectorTests;
+			sourceTree = "<group>";
+		};
+		9AA21B7B235F302C0006B53D /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				AC031CB089635BD4B7E1C756 /* TableRowAction.swift */,
+			);
+			name = Actions;
+			path = "../../../../Downloads/idoc-master/iDoc/PresentationLayer/Common/TableViewDirector/Actions";
+			sourceTree = "<group>";
+		};
+		9AA21B7E235F302C0006B53D /* Directors */ = {
+			isa = PBXGroup;
+			children = (
+				AC03103282B724DF556B241D /* CollectgionDirector.swift */,
+				AC031BAA43D14DEA03DDFC76 /* TableSection.swift */,
+				AC031F6BE70CD5E65CF31EC5 /* TableViewDirector.swift */,
+			);
+			name = Directors;
+			path = "../../../../Downloads/idoc-master/iDoc/PresentationLayer/Common/TableViewDirector/Directors";
+			sourceTree = "<group>";
+		};
+		9AA21B81235F302C0006B53D /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				9AA21B82235F302C0006B53D /* TableRowBuilder.swift */,
+				9AA21B83235F302C0006B53D /* TableRowSwipeBuilder.swift */,
+				AC031769DED3EF8B54587B07 /* CollectionCellBuilder.swift */,
+			);
+			path = Builders;
+			sourceTree = "<group>";
+		};
+		AC0313350DC7DDAF99DC276A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AC0312C2CC3764570222BBE6 /* CommonCellMarker.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +212,7 @@
 				TargetAttributes = {
 					9AA21B21235F2EDA0006B53D = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 					};
 					9AA21B2A235F2EDA0006B53D = {
 						CreatedOnToolsVersion = 11.1;
@@ -195,6 +260,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA21B8A235F302C0006B53D /* TableRowSwipeBuilder.swift in Sources */,
+				9AA21B89235F302C0006B53D /* TableRowBuilder.swift in Sources */,
+				9AA21B8B235F302C0006B53D /* ConfigurableCell.swift in Sources */,
+				9AA21B86235F302C0006B53D /* CellBuilder.swift in Sources */,
+				AC03164C443B77BB42F99A8C /* CollectionCellBuilder.swift in Sources */,
+				AC0316774324A02947E9DB0C /* CommonCellMarker.swift in Sources */,
+				AC031694AE80BE20A3001883 /* CollectgionDirector.swift in Sources */,
+				AC03164E070BD0A16C7AFB28 /* TableSection.swift in Sources */,
+				AC03132C050847B966ADCA55 /* TableViewDirector.swift in Sources */,
+				AC031C33B60C8EF4407CC13A /* TableRowAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -340,6 +415,7 @@
 		9AA21B37235F2EDA0006B53D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7SK5WU3EWN;
@@ -356,6 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.dibadgo.TableDirector;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +441,7 @@
 		9AA21B38235F2EDA0006B53D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7SK5WU3EWN;
@@ -388,6 +466,7 @@
 		9AA21B3A235F2EDA0006B53D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SK5WU3EWN;
 				INFOPLIST_FILE = TableDirectorTests/Info.plist;
@@ -406,6 +485,7 @@
 		9AA21B3B235F2EDA0006B53D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SK5WU3EWN;
 				INFOPLIST_FILE = TableDirectorTests/Info.plist;
