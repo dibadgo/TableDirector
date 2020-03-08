@@ -8,7 +8,7 @@ import UIKit
 
 public class TableViewDirector: NSObject {
 
-    private static let ROW_HEIGHT: CGFloat = 20.0
+    private static let DEF_ROW_HEIGHT: CGFloat = 20.0
 
     public var sections = [TableSection]()
     public weak var tableView: UITableView?
@@ -103,7 +103,7 @@ extension TableViewDirector: UITableViewDataSource, UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return TableViewDirector.ROW_HEIGHT
+        return sections[section].title != nil ? TableViewDirector.DEF_ROW_HEIGHT : 0.0
     }
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
