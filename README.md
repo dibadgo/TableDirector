@@ -127,7 +127,7 @@ What is it?
 
 # Include to your projects:
 
-	pod 'NAME', :git => 'https://github.com/dibadgo/TableDirector.git'
+	pod 'TableDirector', :git => 'https://github.com/dibadgo/TableDirector.git'
 
 # How to build universal framework
 1. Clone the project
