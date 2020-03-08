@@ -7,9 +7,9 @@
 	<img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 </p>
 
-***Version 1.01***
+***Version 1.0.2***
 
-The **Table Director** is a lightware generic library allows you manage the `UITableView` and `UICollectionView` in a declare manier.
+The **Table Director** is a lightweight generic library allows you manage the `UITableView` and `UICollectionView` in a declare manner.
 
 You don't need implement `UI*DataSource` or `UI*Delegate`, just describe Table Director and free codding.
 

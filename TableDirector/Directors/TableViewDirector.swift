@@ -8,7 +8,7 @@ import UIKit
 
 public class TableViewDirector: NSObject {
 
-    private static let ROW_HEIGHT: CGFloat = 20.0
+    private static let DEF_ROW_HEIGHT: CGFloat = 20.0
 
     public var sections = [TableSection]()
     public weak var tableView: UITableView?
@@ -24,11 +24,15 @@ public class TableViewDirector: NSObject {
 
     public var onScrollVertical: ((Int) -> ())?
 
-    public init(withTableView tableView: UITableView, isNeedCellRegister: Bool = false) {
+    public init(withTableView tableView: UITableView, isNeedCellRegister: Bool = false, isDelegate: Bool = false) {
         self.isNeedCellRegister = isNeedCellRegister
         super.init()
         self.tableView = tableView
         self.tableView?.dataSource = self
+
+        if isDelegate {
+            tableView.delegate = self
+        }
     }
 }
 
@@ -99,7 +103,7 @@ extension TableViewDirector: UITableViewDataSource, UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return TableViewDirector.ROW_HEIGHT
+        return sections[section].title != nil ? TableViewDirector.DEF_ROW_HEIGHT : 0.0
     }
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

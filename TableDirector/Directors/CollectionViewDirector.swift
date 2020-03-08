@@ -14,11 +14,15 @@ open class CollectionDirector: NSObject {
     private var reuseIds = Set<String>()
     private var isNeedCellRegister = true
 
-    public init(withCollectionView collectionView: UICollectionView, needCellRegister: Bool = true) {
+    public init(withCollectionView collectionView: UICollectionView, needCellRegister: Bool = true, isDelegate: Bool = false) {
         super.init()
         collectionView.dataSource = self
         self.isNeedCellRegister = needCellRegister
         self.collectionView = collectionView
+
+        if isDelegate {
+            collectionView.delegate = self
+        }
     }
 }
 
