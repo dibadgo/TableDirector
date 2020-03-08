@@ -7,9 +7,12 @@
 	<img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 </p>
 
+***Version 1.01***
+
 Table Direcotr is a lightware generic library allows you manage the `UITableView` and `UICollectionView` in a declare manier.
 
 You don't need implement `UI*DataSource` or `UI*Delegate`, just describe Table Director and free codding.
+
 
 # How to:
 
@@ -90,6 +93,41 @@ What is it?
 * cell - is the cell instance
 * indexPath - type of Index path for this cell
 * userInfo - any user infor provided to this cell
+
+## Swipe builders
+
+```
+ func makeTableView(items: [Item]) {
+ 	let leadingSwipe = PMTaskRowAction(.leadingSwipe, handler: leadingSCellDidSwipe)
+	let clickAction = [MytCell.Action(.click, handler: didSelectCell)]
+    
+    	let builders = itemsToCell.map { item in 
+        	MytCell.Builder(item: item, actions: [clickAction], swipeBuilders: [leadingSwipe])
+    	}
+    
+    	let sections = TableSection(rows: builders, title: "MyItems section")
+    
+    	tableDirector.replace(sections)
+    	tableDirector.reload()
+ }
+
+
+ func leadingSCellDidSwipe(_ options: TableRowActionOptions<PMTaskCell, LMTask>) {
+        guard let userInfo = options.userInfo,
+              userInfo.keys.contains(TableRowSwipeBuilder.SWIPE_KEY),
+              let key = userInfo[TableRowSwipeBuilder.SWIPE_KEY] as? String else {
+            return
+        }
+
+        print("leading \(key)")
+
+        onSwipe(with: options.item, key: key, cell: options.cell!)
+    }
+```
+
+# Include to your projects:
+
+	pod 'NAME', :git => 'https://github.com/dibadgo/TableDirector.git'
 
 # How to build universal framework
 1. Clone the project
