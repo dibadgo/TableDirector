@@ -9,7 +9,7 @@
 
 ***Version 1.01***
 
-The **Table Director** is a lightware generic library allows you manage the `UITableView` and `UICollectionView` in a declare manier.
+The **Table Director** is a lightweight generic library allows you manage the `UITableView` and `UICollectionView` in a declare manner.
 
 You don't need implement `UI*DataSource` or `UI*Delegate`, just describe Table Director and free codding.
 
