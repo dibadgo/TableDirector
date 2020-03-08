@@ -24,11 +24,15 @@ public class TableViewDirector: NSObject {
 
     public var onScrollVertical: ((Int) -> ())?
 
-    public init(withTableView tableView: UITableView, isNeedCellRegister: Bool = false) {
+    public init(withTableView tableView: UITableView, isNeedCellRegister: Bool = false, isDelegate: Bool = false) {
         self.isNeedCellRegister = isNeedCellRegister
         super.init()
         self.tableView = tableView
         self.tableView?.dataSource = self
+
+        if isDelegate {
+            tableView.delegate = self
+        }
     }
 }
 
