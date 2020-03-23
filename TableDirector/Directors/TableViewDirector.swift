@@ -8,15 +8,15 @@ import UIKit
 
 public class TableViewDirector: NSObject {
 
-    private static let DEF_ROW_HEIGHT: CGFloat = 20.0
+    private var reuseIds = Set<String>()
+    private let isNeedCellRegister: Bool
 
     public var sections = [TableSection]()
     public weak var tableView: UITableView?
 
-    private var reuseIds = Set<String>()
-    private let isNeedCellRegister: Bool
+    public var sectionHeaderHeight: CGFloat = 20.0
 
-    var headerView: UIView? {
+    public var headerView: UIView? {
         didSet {
             reloadTable()
         }
@@ -103,7 +103,7 @@ extension TableViewDirector: UITableViewDataSource, UITableViewDelegate {
     }
 
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return sections[section].title != nil ? TableViewDirector.DEF_ROW_HEIGHT : 0.0
+        return sections[section].title != nil ? sectionHeaderHeight : 0.0
     }
 
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -134,6 +134,10 @@ extension TableViewDirector: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return self.headerView
+    }
+
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint,
                                           targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         onScrollVertical?(Int(velocity.y))
@@ -153,6 +157,11 @@ extension TableViewDirector {
 
     public func replace(sections: [TableSection]) {
         self.sections = sections
+    }
+
+    public func reload(sections: [TableSection]) {
+        self.sections = sections
+        reloadTable()
     }
 
     public func clearSections() {
